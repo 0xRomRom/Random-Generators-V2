@@ -1,0 +1,15 @@
+.main-modal {
+  position: relative;
+  width: 33%;
+  height: 25rem;
+  border: 2px solid rgb(125, 125, 225);
+  box-shadow: 0px 0px 5px rgb(125, 125, 225);
+  color: white;
+  border-radius: 1rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .main-modal {
+    width: 45%;
+  }
+}

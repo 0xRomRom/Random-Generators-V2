@@ -5,11 +5,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(40, 44, 52);
+  overflow-x: hidden !important;
 }
 
 * {
   padding: 0 !important;
   margin: 0 !important;
+  box-sizing: border-box !important;
 }
 
 code {
