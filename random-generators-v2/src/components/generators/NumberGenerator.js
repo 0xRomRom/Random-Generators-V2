@@ -78,7 +78,6 @@ const NumberGenerator = () => {
           })}
         </ul>
       </div>
-
       <FontAwesomeIcon
         icon={faTrashCan}
         className={cl["delete-list"]}
