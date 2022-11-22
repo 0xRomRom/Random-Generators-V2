@@ -8,13 +8,16 @@ import tails from "../UI/img/tails.png";
 const CoinTossGenerator = () => {
   const [logArray, setLogArray] = useState([]);
   const [randomToss, setRandomToss] = useState("");
+  const [tossedCount, setTossedCount] = useState(0);
   const deleteListHandler = () => {
     setLogArray([]);
     setRandomToss("");
+    setTossedCount(0);
   };
 
   const flipHandler = () => {
     const odds = Math.random();
+    setTossedCount((prevCount) => prevCount + 1);
     if (odds >= 0.5) {
       setRandomToss("Heads");
       setLogArray((toss) => [...toss, "Heads"]);
@@ -40,6 +43,7 @@ const CoinTossGenerator = () => {
             className={cl.img}
             alt="Heads or tails game"
           />
+          <span className={cl.tossed}>x{tossedCount}</span>
         </div>
       )}
       <div className={cl["log-box"]}>
