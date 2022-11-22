@@ -2,6 +2,7 @@ import cl from "./AppContainer.module.css";
 import RandomModal from "./RandomModal.js";
 import NumberGenerator from "../generators/NumberGenerator.js";
 import LetterGenerator from "../generators/LetterGenerator.js";
+import WordGenerator from "../generators/WordGenerator.js";
 
 const AppContainer = () => {
   return (
@@ -13,7 +14,9 @@ const AppContainer = () => {
         <RandomModal>
           <LetterGenerator />
         </RandomModal>
-        <RandomModal />
+        <RandomModal>
+          <WordGenerator />
+        </RandomModal>
       </div>
     </div>
   );

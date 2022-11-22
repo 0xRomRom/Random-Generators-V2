@@ -101,9 +101,8 @@
 .delete-list {
   color: gray;
   font-size: 1.75rem;
-  position: absolute;
-  left: 10.5rem;
-  top: 20rem;
+  position: relative;
+  margin-top: 0.3rem !important;
 }
 
 .delete-list:hover {
