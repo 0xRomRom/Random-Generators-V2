@@ -44,11 +44,13 @@ const ColorGenerator = () => {
           })}
         </ul>
       </div>
-      <FontAwesomeIcon
-        icon={faTrashCan}
-        className={cl["delete-list"]}
-        onClick={deleteListHandler}
-      />
+      {randomColor && (
+        <FontAwesomeIcon
+          icon={faTrashCan}
+          className={cl["delete-list"]}
+          onClick={deleteListHandler}
+        />
+      )}
     </div>
   );
 };

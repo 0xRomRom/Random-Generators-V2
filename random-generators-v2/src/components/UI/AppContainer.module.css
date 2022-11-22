@@ -12,6 +12,7 @@
   margin-top: 1rem !important;
   min-height: 15rem;
   /* background-color: red; */
+  justify-content: space-evenly;
   display: flex;
   color: white;
   gap: 1%;

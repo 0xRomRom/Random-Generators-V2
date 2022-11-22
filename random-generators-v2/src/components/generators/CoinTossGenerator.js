@@ -41,7 +41,6 @@ const CoinTossGenerator = () => {
           />
         </div>
       )}
-
       <div className={cl["log-box"]}>
         <ul>
           {logArray.map((numbers, i) => {
@@ -54,11 +53,13 @@ const CoinTossGenerator = () => {
           })}
         </ul>
       </div>
-      <FontAwesomeIcon
-        icon={faTrashCan}
-        className={cl["delete-list"]}
-        onClick={deleteListHandler}
-      />
+      {randomToss && (
+        <FontAwesomeIcon
+          icon={faTrashCan}
+          className={cl["delete-list"]}
+          onClick={deleteListHandler}
+        />
+      )}
     </div>
   );
 };

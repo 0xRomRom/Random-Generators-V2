@@ -63,11 +63,13 @@ const WordGenerator = () => {
           })}
         </ul>
       </div>
-      <FontAwesomeIcon
-        icon={faTrashCan}
-        className={cl["delete-list"]}
-        onClick={deleteListHandler}
-      />
+      {randomWord && (
+        <FontAwesomeIcon
+          icon={faTrashCan}
+          className={cl["delete-list"]}
+          onClick={deleteListHandler}
+        />
+      )}
     </div>
   );
 };
