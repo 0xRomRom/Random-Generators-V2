@@ -40,6 +40,7 @@ const NumberGenerator = () => {
 
   const deleteListHandler = () => {
     setLogArray([]);
+    setRandomNumber("");
   };
 
   return (

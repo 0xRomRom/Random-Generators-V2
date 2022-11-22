@@ -38,6 +38,7 @@ const LetterGenerator = () => {
   const [randomLetter, setRandomLetter] = useState("");
   const deleteListHandler = () => {
     setLogArray([]);
+    setRandomLetter("");
   };
 
   const letterHandler = () => {

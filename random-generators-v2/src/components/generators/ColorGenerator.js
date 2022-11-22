@@ -1,32 +1,37 @@
-import cl from "./WordGenerator.module.css";
+import cl from "./ColorGenerator.module.css";
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
-const words = require("an-array-of-english-words");
 
-const WordGenerator = () => {
+const ColorGenerator = () => {
   const [logArray, setLogArray] = useState([]);
-  const [randomWord, setRandomWord] = useState("");
+  const [randomColor, setRandomColor] = useState("");
   const deleteListHandler = () => {
     setLogArray([]);
-    setRandomWord("");
+    setRandomColor("");
   };
 
-  const wordHandler = () => {
-    const randomWord = Math.round(Math.random() * 274937);
-    const resultWord =
-      words[randomWord].charAt(0).toUpperCase() + words[randomWord].slice(1);
-    setRandomWord(resultWord);
-    setLogArray((word) => [...word, resultWord]);
+  const colorHandler = () => {
+    const randomColor = `rgb(${Math.round(
+      Math.random() * 255 + 1
+    )}, ${Math.round(Math.random() * 255 + 1)}, ${Math.round(
+      Math.random() * 255 + 1
+    )})`;
+    setRandomColor(randomColor);
+    setLogArray((color) => [...color, randomColor]);
   };
 
   return (
     <div className={cl["inner-div"]}>
-      <h1 className={cl.header}>Word Generator</h1>
-      <span className={cl.output}>{randomWord || "?"}</span>
-      <button className={cl.generate} onClick={wordHandler}>
+      <h1 className={cl.header}>Color Generator</h1>
+      <span className={cl.output}>{randomColor || "?"}</span>
+      <button className={cl.generate} onClick={colorHandler}>
         Generate
       </button>
+      <div
+        className={cl["color-output"]}
+        style={{ backgroundColor: randomColor }}
+      ></div>
       <div className={cl["log-box"]}>
         <ul>
           {logArray.map((numbers, i) => {
@@ -48,4 +53,4 @@ const WordGenerator = () => {
   );
 };
 
-export default WordGenerator;
+export default ColorGenerator;

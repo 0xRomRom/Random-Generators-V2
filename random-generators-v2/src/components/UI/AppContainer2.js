@@ -1,6 +1,7 @@
 import cl from "./AppContainer2.module.css";
 import RandomModal from "./RandomModal.js";
 import CountryGenerator from "../generators/CountryGenerator";
+import ColorGenerator from "../generators/ColorGenerator";
 
 const AppContainer2 = () => {
   return (
@@ -9,7 +10,9 @@ const AppContainer2 = () => {
         <RandomModal>
           <CountryGenerator />
         </RandomModal>
-        <RandomModal></RandomModal>
+        <RandomModal>
+          <ColorGenerator />
+        </RandomModal>
         <RandomModal></RandomModal>
       </div>
     </div>

@@ -216,6 +216,7 @@ const CountryGenerator = () => {
   const [randomCountry, setRandomCountry] = useState("");
   const deleteListHandler = () => {
     setLogArray([]);
+    setRandomCountry("");
   };
 
   const countryHandler = () => {
