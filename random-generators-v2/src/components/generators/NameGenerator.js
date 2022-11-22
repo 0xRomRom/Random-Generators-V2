@@ -6,26 +6,30 @@ import femaleNames from "../data/femaleArray.js";
 import maleNames from "../data/maleArray.js";
 
 const NameGenerator = () => {
-  const [logArray, setLogArray] = useState([]);
-  const [randomName, setRandomName] = useState("");
+  const [logFemaleArray, setLogFemaleArray] = useState([]);
+  const [logMaleArray, setLogMaleArray] = useState([]);
+  const [randomFemaleName, setRandomFemaleName] = useState("");
+  const [randomMaleName, setRandomMaleName] = useState("");
   const [sexChange, setSexChange] = useState(false);
 
   const deleteListHandler = () => {
-    setLogArray([]);
-    setRandomName("");
+    setLogFemaleArray([]);
+    setLogMaleArray([]);
+    setRandomFemaleName("");
+    setRandomMaleName("");
   };
 
   const nameHandler = () => {
     if (!sexChange) {
       const randomInt = Math.round(Math.random() * 17652);
-      setRandomName(femaleNames[randomInt]);
-      setLogArray((name) => [...name, femaleNames[randomInt]]);
+      setRandomFemaleName(femaleNames[randomInt]);
+      setLogFemaleArray((name) => [...name, femaleNames[randomInt]]);
       return;
     }
     if (sexChange) {
       const randomInt = Math.round(Math.random() * 12111);
-      setRandomName(maleNames[randomInt]);
-      setLogArray((name) => [...name, maleNames[randomInt]]);
+      setRandomMaleName(maleNames[randomInt]);
+      setLogMaleArray((name) => [...name, maleNames[randomInt]]);
     }
   };
 
@@ -40,7 +44,11 @@ const NameGenerator = () => {
   return (
     <div className={cl["inner-div"]}>
       <h1 className={cl.header}>Name Generator</h1>
-      <span className={cl.output}>{randomName || "?"}</span>
+      {!sexChange && (
+        <span className={cl.output}>{randomFemaleName || "?"}</span>
+      )}
+      {sexChange && <span className={cl.output}>{randomMaleName || "?"}</span>}
+
       <button className={cl.generate} onClick={nameHandler}>
         Generate
       </button>
@@ -61,19 +69,36 @@ const NameGenerator = () => {
           </span>
         </div>
       </div>
-      <div className={cl["log-box"]}>
-        <ul>
-          {logArray.map((numbers, i) => {
-            return (
-              <li key={Math.random()}>
-                {i + 1 + ": "}
-                {numbers}
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-      {randomName && (
+      {!sexChange && (
+        <div className={cl["log-box"]}>
+          <ul>
+            {logFemaleArray.map((numbers, i) => {
+              return (
+                <li key={Math.random()}>
+                  {i + 1 + ": "}
+                  {numbers}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      )}
+      {sexChange && (
+        <div className={cl["log-box"]}>
+          <ul>
+            {logMaleArray.map((numbers, i) => {
+              return (
+                <li key={Math.random()}>
+                  {i + 1 + ": "}
+                  {numbers}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      )}
+
+      {randomFemaleName && (
         <FontAwesomeIcon
           icon={faTrashCan}
           className={cl["delete-list"]}
