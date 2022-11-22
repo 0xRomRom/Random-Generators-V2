@@ -8,7 +8,7 @@ const Nav = () => {
       <li>Letter</li>
       <li>Word</li>
       <li>Country</li>
-      <li>Coin Flip</li>
+      <li>Coin Toss</li>
     </ul>
   );
 };

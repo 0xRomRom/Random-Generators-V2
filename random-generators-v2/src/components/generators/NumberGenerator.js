@@ -79,11 +79,13 @@ const NumberGenerator = () => {
           })}
         </ul>
       </div>
-      <FontAwesomeIcon
-        icon={faTrashCan}
-        className={cl["delete-list"]}
-        onClick={deleteListHandler}
-      />
+      {randomNumber && (
+        <FontAwesomeIcon
+          icon={faTrashCan}
+          className={cl["delete-list"]}
+          onClick={deleteListHandler}
+        />
+      )}
     </div>
   );
 };
