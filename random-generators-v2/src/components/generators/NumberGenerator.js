@@ -6,10 +6,29 @@ const NumberGenerator = () => {
   const lowInput = useRef(0);
   const highInput = useRef(0);
 
+  const calculateAdditional = () => {
+    if (+lowInput.current.value === 0 && highInput.current.value === "") {
+      const randomInteger = Math.round(Math.random() * 10000);
+      setRandomNumber(randomInteger);
+      return;
+    }
+
+    if (+lowInput.current.value < +highInput.current.value) {
+      const minInt = +lowInput.current.value;
+      const maxInt = +highInput.current.value;
+      const calculate = Math.round(Math.random() * (maxInt - minInt) + minInt);
+      setRandomNumber(calculate);
+      return;
+    }
+  };
+
   const calculateHandler = () => {
-    let randomInteger = Math.round(Math.random() * 5000);
+    if (+highInput.current.value !== "") {
+      calculateAdditional();
+      return;
+    }
+    const randomInteger = Math.round(Math.random() * 10000);
     setRandomNumber(randomInteger);
-    alert(lowInput.current.value);
   };
 
   return (
@@ -28,7 +47,12 @@ const NumberGenerator = () => {
           defaultValue={0}
         ></input>
         <span className={cl["input-span"]}>To</span>
-        <input type="text" className={cl.input2} ref={highInput}></input>
+        <input
+          type="text"
+          className={cl.input2}
+          ref={highInput}
+          defaultValue={""}
+        ></input>
       </div>
     </div>
   );
