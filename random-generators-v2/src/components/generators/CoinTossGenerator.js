@@ -38,6 +38,7 @@ const CoinTossGenerator = () => {
           <img
             src={randomToss === "Heads" ? heads : tails}
             className={cl.img}
+            alt="Heads or tails game"
           />
         </div>
       )}
