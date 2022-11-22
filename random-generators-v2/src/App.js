@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
-import Nav from "./components/Nav";
-import AppContainer from "./components/AppContainer";
+import Nav from "./components/Nav.js";
+import AppContainer from "./components/UI/AppContainer.js";
 
 function App() {
   return (
