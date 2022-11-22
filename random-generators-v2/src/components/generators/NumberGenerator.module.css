@@ -80,3 +80,33 @@
   font-size: 1.5rem;
   padding-bottom: 0.3rem !important;
 }
+
+.log-box {
+  position: relative;
+  width: 40%;
+  left: 30%;
+  height: 7rem;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  list-style-type: none;
+  /* background-color: black; */
+}
+
+.log-box li {
+  list-style-type: none;
+}
+
+.delete-list {
+  color: gray;
+  font-size: 1.75rem;
+  position: absolute;
+  left: 10.5rem;
+  top: 20rem;
+}
+
+.delete-list:hover {
+  color: white;
+  cursor: pointer;
+}

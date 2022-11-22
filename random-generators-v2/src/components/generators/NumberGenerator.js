@@ -1,8 +1,12 @@
 import cl from "./NumberGenerator.module.css";
 import React, { useState, useRef } from "react";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
+
 const NumberGenerator = () => {
   const [randomNumber, setRandomNumber] = useState("");
+  const [logArray, setLogArray] = useState([]);
   const lowInput = useRef(0);
   const highInput = useRef(0);
 
@@ -10,6 +14,7 @@ const NumberGenerator = () => {
     if (+lowInput.current.value === 0 && highInput.current.value === "") {
       const randomInteger = Math.round(Math.random() * 10000);
       setRandomNumber(randomInteger);
+      setLogArray((number) => [...number, randomInteger]);
       return;
     }
 
@@ -18,6 +23,7 @@ const NumberGenerator = () => {
       const maxInt = +highInput.current.value;
       const calculate = Math.round(Math.random() * (maxInt - minInt) + minInt);
       setRandomNumber(calculate);
+      setLogArray((number) => [...number, calculate]);
       return;
     }
   };
@@ -27,14 +33,19 @@ const NumberGenerator = () => {
       calculateAdditional();
       return;
     }
-    const randomInteger = Math.round(Math.random() * 10000);
+    const randomInteger = Math.round(Math.random() * 1000);
     setRandomNumber(randomInteger);
+    setLogArray((number) => [...number, randomInteger]);
+  };
+
+  const deleteListHandler = () => {
+    setLogArray([]);
   };
 
   return (
     <div className={cl["inner-div"]}>
       <h1 className={cl.header}>Number Generator</h1>
-      <span className={cl.output}>{randomNumber}</span>
+      <span className={cl.output}>{randomNumber || "?"}</span>
       <button className={cl.generate} onClick={calculateHandler}>
         Generate
       </button>
@@ -51,9 +62,28 @@ const NumberGenerator = () => {
           type="text"
           className={cl.input2}
           ref={highInput}
-          defaultValue={""}
+          defaultValue={1000}
         ></input>
       </div>
+
+      <div className={cl["log-box"]}>
+        <ul>
+          {logArray.map((numbers, i) => {
+            return (
+              <li key={Math.random()}>
+                {i + 1 + ": "}
+                {numbers}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+
+      <FontAwesomeIcon
+        icon={faTrashCan}
+        className={cl["delete-list"]}
+        onClick={deleteListHandler}
+      />
     </div>
   );
 };
