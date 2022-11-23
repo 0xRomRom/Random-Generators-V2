@@ -12,10 +12,13 @@ const NameGenerator = () => {
   const [randomMaleName, setRandomMaleName] = useState("");
   const [sexChange, setSexChange] = useState(false);
 
-  const deleteListHandler = () => {
+  const deleteFemaleListHandler = () => {
     setLogFemaleArray([]);
-    setLogMaleArray([]);
     setRandomFemaleName("");
+  };
+
+  const deleteMaleListHandler = () => {
+    setLogMaleArray([]);
     setRandomMaleName("");
   };
 
@@ -83,6 +86,13 @@ const NameGenerator = () => {
           </ul>
         </div>
       )}
+      {randomFemaleName.length > 0 && !sexChange ? (
+        <FontAwesomeIcon
+          icon={faTrashCan}
+          className={cl["delete-list"]}
+          onClick={deleteFemaleListHandler}
+        />
+      ) : null}
       {sexChange && (
         <div className={cl["log-box"]}>
           <ul>
@@ -97,14 +107,13 @@ const NameGenerator = () => {
           </ul>
         </div>
       )}
-
-      {randomFemaleName && (
+      {randomMaleName.length > 0 && sexChange ? (
         <FontAwesomeIcon
           icon={faTrashCan}
           className={cl["delete-list"]}
-          onClick={deleteListHandler}
+          onClick={deleteMaleListHandler}
         />
-      )}
+      ) : null}
     </div>
   );
 };
