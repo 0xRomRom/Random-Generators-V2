@@ -9,7 +9,7 @@
 .header {
   text-align: center;
   font-family: "Open Sans";
-  font-size: 1.3vw;
+  font-size: 1.5rem;
 }
 
 .generate {
@@ -67,19 +67,4 @@
 .delete-list:hover {
   color: white;
   cursor: pointer;
-}
-
-.input {
-  position: absolute;
-  width: 50%;
-  left: 25%;
-  height: 1.5rem;
-  top: 9rem;
-  border: none;
-  background-color: transparent;
-  border: 2px solid rgb(183, 64, 246);
-  border-radius: 0.2rem;
-  outline: 0;
-  color: white;
-  padding-left: 0.5rem !important;
 }
