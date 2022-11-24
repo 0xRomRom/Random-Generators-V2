@@ -15,16 +15,14 @@ const AverageGenerator = () => {
   };
 
   const generateAverage = () => {
+    if (inputRef.current.value === "") return;
     const avgTxt = inputRef.current.value;
     const avgArray = avgTxt.split(",");
     let totalCount = 0;
     avgArray.map((item) => {
-      console.log(+item);
       return (totalCount += +item);
     });
-    console.log(avgArray);
-    console.log(totalCount / avgArray.length);
-    setAverage((totalCount / avgArray.length).toFixed(7));
+    setAverage(totalCount / avgArray.length);
     setLogArray((item) => [...item, totalCount / avgArray.length]);
   };
 
