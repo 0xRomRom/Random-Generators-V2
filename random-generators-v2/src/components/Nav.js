@@ -10,6 +10,9 @@ const Nav = () => {
       <li>Country</li>
       <li>Color</li>
       <li>Coin Toss</li>
+      <li>Name</li>
+      <li>Average</li>
+      <li>Game</li>
     </ul>
   );
 };

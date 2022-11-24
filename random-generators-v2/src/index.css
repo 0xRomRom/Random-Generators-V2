@@ -4,7 +4,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(40, 44, 52);
+  /* background-color: rgb(40, 44, 52); */
+  /* background-color: black; */
+  background: linear-gradient(black, rgb(29, 28, 28));
   overflow-x: hidden !important;
 }
 
