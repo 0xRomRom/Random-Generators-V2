@@ -1,5 +1,5 @@
 import cl from "./CoinTossGenerator.module.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import heads from "../UI/img/heads.png";
@@ -9,11 +9,32 @@ const CoinTossGenerator = () => {
   const [logArray, setLogArray] = useState([]);
   const [randomToss, setRandomToss] = useState("");
   const [tossedCount, setTossedCount] = useState(0);
+  const [headsPercent, setHeadPercent] = useState("");
+  const [tailsPercent, setTailsPercent] = useState("");
   const deleteListHandler = () => {
     setLogArray([]);
     setRandomToss("");
     setTossedCount(0);
   };
+
+  useEffect(() => {
+    let heads = 0;
+    let tails = 0;
+    logArray.map((item) => {
+      if (item === "Heads") {
+        heads += 1;
+      }
+      if (item === "Tails") {
+        tails += 1;
+      }
+    });
+    const headsPercentage = (heads / tossedCount) * 100;
+    const tailsPercentage = (tails / tossedCount) * 100;
+    console.log(Math.round(headsPercentage) + "%");
+    console.log(Math.round(tailsPercentage) + "%");
+    setHeadPercent("Heads: " + Math.round(headsPercentage) + "%");
+    setTailsPercent("Tails: " + Math.round(tailsPercentage) + "%");
+  }, [logArray]);
 
   const flipHandler = () => {
     const odds = Math.random();
@@ -36,6 +57,13 @@ const CoinTossGenerator = () => {
       <button className={cl.generate} onClick={flipHandler}>
         Toss
       </button>
+      {tossedCount > 0 ? (
+        <div className={cl["perc-box"]}>
+          <span>{headsPercent}</span>
+          <span>{tailsPercent}</span>{" "}
+        </div>
+      ) : null}
+
       {randomToss && (
         <div className={cl["coin-output"]}>
           <img
