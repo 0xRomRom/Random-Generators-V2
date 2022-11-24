@@ -27,14 +27,13 @@ const CoinTossGenerator = () => {
       if (item === "Tails") {
         tails += 1;
       }
+      return null;
     });
     const headsPercentage = (heads / tossedCount) * 100;
     const tailsPercentage = (tails / tossedCount) * 100;
-    console.log(Math.round(headsPercentage) + "%");
-    console.log(Math.round(tailsPercentage) + "%");
     setHeadPercent("Heads: " + Math.round(headsPercentage) + "%");
     setTailsPercent("Tails: " + Math.round(tailsPercentage) + "%");
-  }, [logArray]);
+  }, [logArray, tossedCount]);
 
   const flipHandler = () => {
     const odds = Math.random();

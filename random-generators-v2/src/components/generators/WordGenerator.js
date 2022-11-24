@@ -30,7 +30,6 @@ const WordGenerator = () => {
 
     const resultWord =
       words[randomWord].charAt(0).toUpperCase() + words[randomWord].slice(1);
-    console.log(resultWord);
     setRandomWord(resultWord);
     setLogArray((word) => [...word, resultWord]);
   };

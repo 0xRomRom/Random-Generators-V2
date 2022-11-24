@@ -1,6 +1,7 @@
 import cl from "./AppContainer3.module.css";
 import RandomModal from "./RandomModal.js";
 import NameGenerator from "../generators/NameGenerator";
+import AverageGenerator from "../generators/AverageGenerator";
 
 const AppContainer3 = () => {
   return (
@@ -9,7 +10,9 @@ const AppContainer3 = () => {
         <RandomModal>
           <NameGenerator />
         </RandomModal>
-        <RandomModal></RandomModal>
+        <RandomModal>
+          <AverageGenerator />
+        </RandomModal>
         <RandomModal></RandomModal>
       </div>
     </div>
