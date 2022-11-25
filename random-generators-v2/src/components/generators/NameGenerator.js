@@ -58,18 +58,8 @@ const NameGenerator = () => {
       <div className={cl["sex-toggle"]} onClick={sexHandler}>
         <div className={cl.overlay}></div>
         <div className={cl.femaleMale}>
-          <span
-            className={!sexChange ? cl.white : cl.span1}
-            style={{ backgroundColor: !sexChange ? "white" : "transparent" }}
-          >
-            Female
-          </span>
-          <span
-            className={sexChange ? cl.white : cl.span2}
-            style={{ backgroundColor: sexChange ? "white" : "transparent" }}
-          >
-            Male
-          </span>
+          <span className={!sexChange ? cl.white : cl.span1}>Female</span>
+          <span className={sexChange ? cl.white : cl.span2}>Male</span>
         </div>
       </div>
       {!sexChange && (
