@@ -6,30 +6,37 @@ import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 const CryptoGenerator = () => {
   const [logArray, setLogArray] = useState([]);
   const [fetchObject, setFetchObject] = useState({});
-  const [fetched, setFetched] = useState(false);
   const [randomCoin, setRandomCoin] = useState("");
   const deleteListHandler = () => {
     setLogArray([]);
     setRandomCoin("");
   };
 
+  let temp = `https://dummyjson.com/products`;
+  // let temp = `https://api.coingecko.com/api/v3/coins/list?include_platform=true`;
+
   useEffect(() => {
-    fetch(`https://api.coingecko.com/api/v3/coins/list?include_platform=true`)
+    fetch(`https://api.coingecko.com/api/v3/coins/list?include_platform=true`, {
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+    })
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
         setFetchObject(data);
-        setFetched(true);
-      })
-      .catch((err) => {
-        console.log(err);
       });
-  }, [fetched]);
+  }, []);
 
   const coinHandler = () => {
     const randomInt = Math.round(Math.random() * 12000);
-    setRandomCoin(fetchObject[randomInt].id);
-    setLogArray((item) => [...item, randomCoin]);
+    const newString =
+      fetchObject[randomInt].id.charAt(0).toUpperCase() +
+      fetchObject[randomInt].id.slice(1);
+    const finalString = newString.replaceAll("-", " ");
+    setRandomCoin(finalString);
+    setLogArray((item) => [...item, finalString]);
   };
 
   return (
