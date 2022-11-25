@@ -59,14 +59,14 @@ const NameGenerator = () => {
         <div className={cl.overlay}></div>
         <div className={cl.femaleMale}>
           <span
-            className={cl.span}
-            style={{ backgroundColor: !sexChange ? "black" : "transparent" }}
+            className={!sexChange ? cl.white : cl.span1}
+            style={{ backgroundColor: !sexChange ? "white" : "transparent" }}
           >
             Female
           </span>
           <span
-            className={cl.span}
-            style={{ backgroundColor: sexChange ? "black" : "transparent" }}
+            className={sexChange ? cl.white : cl.span2}
+            style={{ backgroundColor: sexChange ? "white" : "transparent" }}
           >
             Male
           </span>
