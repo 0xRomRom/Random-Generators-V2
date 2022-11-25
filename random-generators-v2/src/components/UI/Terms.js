@@ -1,5 +1,7 @@
 import cl from "./Terms.module.css";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
 
 const Terms = () => {
   return (
@@ -331,6 +333,9 @@ const Terms = () => {
           damage of any nature.
         </p>
       </div>
+      <Link to="/">
+        <FontAwesomeIcon icon={faHouse} className={cl.home} />
+      </Link>
     </div>
   );
 };

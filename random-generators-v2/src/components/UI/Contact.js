@@ -7,9 +7,11 @@ import { faHouse } from "@fortawesome/free-solid-svg-icons";
 const Contact = () => {
   const messageRef = useRef("");
   const emailRef = useRef("");
-  const [submitted, setSubmitted] = useState(true);
+  const [submitted, setSubmitted] = useState(false);
 
   const submissionHandler = (e) => {
+    e.preventDefault();
+    if (messageRef.current.value === "") return;
     const userMessage = {
       message: messageRef.current.value,
       email: emailRef.current.value,
@@ -25,12 +27,7 @@ const Contact = () => {
       }
     ).then((response) => {
       return response.status === 200 ? setSubmitted(true) : null;
-      console.log(response.status);
     });
-
-    e.preventDefault();
-    console.log(messageRef.current.value);
-    console.log(emailRef.current.value);
   };
 
   return (
@@ -40,9 +37,7 @@ const Contact = () => {
       </Link>
       {!submitted && (
         <div className={cl["contact-box"]}>
-          <h3 className={cl.hero}>
-            We'll try to get back at you as soon as possible
-          </h3>
+          <h3 className={cl.hero}>We'll get back at you as soon as possible</h3>
           <form>
             <textarea className={cl.message} ref={messageRef}></textarea>
             <input

@@ -83,9 +83,9 @@
   top: 6rem;
   height: 2.5rem;
   outline: 0;
-  background-color: rgb(10, 10, 217) !important;
-  box-shadow: 0px 0px 10px rgb(5, 5, 204);
-  border: none;
+  background-color: transparent;
+  box-shadow: 0px 0px 10px rgb(53, 53, 187);
+  border: 2px solid rgb(10, 10, 217);
   color: white;
   font-family: "Open Sans";
   cursor: pointer;
@@ -116,7 +116,8 @@
 }
 
 .submit:hover {
-  background-color: rgb(53, 53, 187) !important;
+  background-color: rgb(10, 10, 217) !important;
+  /* background-color: rgb(53, 53, 187) !important; */
 }
 
 @media only screen and (max-width: 500px) {

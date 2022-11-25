@@ -1,6 +1,9 @@
 import cl from "./Privacy.module.css";
 import { Link } from "react-router-dom";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
+
 const Privacy = () => {
   return (
     <div className={cl["main-div"]}>
@@ -256,6 +259,9 @@ const Privacy = () => {
           efforts to promptly remove such information from our records.
         </p>
       </div>
+      <Link to="/">
+        <FontAwesomeIcon icon={faHouse} className={cl.home} />
+      </Link>
     </div>
   );
 };
