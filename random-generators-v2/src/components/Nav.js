@@ -1,38 +1,39 @@
 import cl from "./Nav.module.css";
+import { Link } from 'react-scroll'
 
 const Nav = () => {
   return (
     <ul className={cl.nav}>
-      <a href="#top">
+      <Link to="top" spy={true} smooth={true} offset={-70} duration={500}>
         <li className={cl["header-text"]}>Random Generators</li>
-      </a>
-      <a href="#number">
+      </Link>
+      <Link to="number" spy={true} smooth={true} offset={-70} duration={500}>
         <li>Number</li>
-      </a>
-      <a href="#letter">
+      </Link>
+      <Link to="letter" spy={true} smooth={true} offset={-70} duration={500}>
         <li>Letter</li>
-      </a>
-      <a href="#word">
+      </Link>
+      <Link to="word" spy={true} smooth={true} offset={-70} duration={500}>
         <li>Word</li>
-      </a>
-      <a href="#country">
+      </Link>
+      <Link to="country" spy={true} smooth={true} offset={-70} duration={500}>
         <li>Country</li>
-      </a>
-      <a href="#color">
+      </Link>
+      <Link to="color" spy={true} smooth={true} offset={-70} duration={500}>
         <li>Color</li>
-      </a>
-      <a href="#toss">
+      </Link>
+      <Link to="toss" spy={true} smooth={true} offset={-70} duration={500}>
         <li>Coin Toss</li>
-      </a>
-      <a href="#name">
+      </Link>
+      <Link to="name" spy={true} smooth={true} offset={-70} duration={500}>
         <li>Name</li>
-      </a>
-      <a href="#average">
+      </Link>
+      <Link to="average" spy={true} smooth={true} offset={-70} duration={500}>
         <li>Average</li>
-      </a>
-      <a href="#game">
+      </Link>
+      <Link to="game" spy={true} smooth={true} offset={-70} duration={500}>
         <li>Game</li>
-      </a>
+      </Link>
     </ul>
   );
 };
