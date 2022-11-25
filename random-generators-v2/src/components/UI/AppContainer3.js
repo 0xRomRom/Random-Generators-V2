@@ -2,7 +2,7 @@ import cl from "./AppContainer3.module.css";
 import RandomModal from "./RandomModal.js";
 import NameGenerator from "../generators/NameGenerator";
 import AverageGenerator from "../generators/AverageGenerator";
-import GameGenerator from "../generators/GameGenerator";
+import GameGenerator from "../generators/CryptoGenerator";
 
 const AppContainer3 = () => {
   return (
