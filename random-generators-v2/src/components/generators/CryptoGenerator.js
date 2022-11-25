@@ -12,7 +12,7 @@ const CryptoGenerator = () => {
     setRandomCoin("");
   };
 
-  let temp = `https://dummyjson.com/products`;
+  // let temp = `https://dummyjson.com/products`;
   // let temp = `https://api.coingecko.com/api/v3/coins/list?include_platform=true`;
 
   useEffect(() => {
