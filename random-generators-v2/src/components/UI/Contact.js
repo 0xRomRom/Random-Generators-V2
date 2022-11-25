@@ -36,21 +36,28 @@ const Contact = () => {
         <h1 className={cl.logo}>Random Generators</h1>
       </Link>
       {!submitted && (
-        <div className={cl["contact-box"]}>
-          <h3 className={cl.hero}>We'll get back at you as soon as possible</h3>
-          <form>
-            <textarea className={cl.message} ref={messageRef}></textarea>
-            <input
-              type="email"
-              className={cl.email}
-              placeholder="Your email address"
-              ref={emailRef}
-            ></input>
-            <button className={cl.submit} onClick={submissionHandler}>
-              Submit
-            </button>
-          </form>
-        </div>
+        <>
+          <div className={cl["contact-box"]}>
+            <h3 className={cl.hero}>
+              We'll get back at you as soon as possible
+            </h3>
+            <form>
+              <textarea className={cl.message} ref={messageRef}></textarea>
+              <input
+                type="email"
+                className={cl.email}
+                placeholder="Your email address"
+                ref={emailRef}
+              ></input>
+              <button className={cl.submit} onClick={submissionHandler}>
+                Submit
+              </button>
+            </form>
+          </div>
+          <Link to="/">
+            <FontAwesomeIcon icon={faHouse} className={cl.home} />
+          </Link>
+        </>
       )}
       {submitted && (
         <>
