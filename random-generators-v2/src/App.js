@@ -1,16 +1,20 @@
 import React, { Fragment } from "react";
-import Nav from "./components/Nav.js";
-import AppContainer from "./components/UI/AppContainer.js";
-import AppContainer2 from "./components/UI/AppContainer2.js";
-import AppContainer3 from "./components/UI/AppContainer3.js";
+import { Route, Routes } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop.js";
+import MainApp from "./components/UI/MainApp.js";
+import Privacy from "./components/UI/Privacy.js";
+import Terms from "./components/UI/Terms.js";
 
 function App() {
   return (
     <Fragment>
-      <Nav />
-      <AppContainer />
-      <AppContainer2 />
-      <AppContainer3 />
+      <ScrollToTop>
+        <Routes>
+          <Route path="/" element={<MainApp />}></Route>
+          <Route path="/privacy" element={<Privacy />}></Route>
+          <Route path="/terms" element={<Terms />}></Route>
+        </Routes>
+      </ScrollToTop>
     </Fragment>
   );
 }

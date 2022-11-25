@@ -12,15 +12,15 @@ const GameGenerator = () => {
     setRandomGame("");
   };
 
-  useEffect(() => {
-    fetch(
-      `https://api.rawg.io/api/games?key=cf42e3bb5fbd48a691d516591b2fa9a5&page_size=40`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        setFetchObject(data);
-      });
-  });
+  // useEffect(() => {
+  //   fetch(
+  //     `https://api.rawg.io/api/games?key=cf42e3bb5fbd48a691d516591b2fa9a5&page_size=40`
+  //   )
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setFetchObject(data);
+  //     });
+  // });
 
   const gameHandler = () => {
     const randomInt = Math.round(Math.random() * 39);

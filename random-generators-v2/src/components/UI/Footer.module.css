@@ -1,0 +1,16 @@
+.list {
+  color: white;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 3rem;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.list li:hover {
+  cursor: pointer;
+  color: rgb(125, 125, 225);
+}

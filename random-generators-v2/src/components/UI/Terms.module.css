@@ -1,0 +1,68 @@
+.main-div {
+  margin-top: 5rem !important;
+  margin-bottom: 5rem !important;
+  position: relative;
+  width: 100vw;
+  height: auto;
+  background-color: black !important;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background: linear-gradient(rgb(0, 0, 0), rgb(29, 28, 28)) !important;
+}
+
+* {
+  list-style-type: none;
+  /* background-color: black !important; */
+}
+
+.logo {
+  font-size: 1.75rem;
+  position: absolute;
+  left: 1rem;
+  font-family: "Press Start 2P", sans-serif;
+  color: rgb(125, 125, 225);
+  top: -5.5rem;
+  background-color: black;
+  padding-top: 1rem !important;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.logo:hover {
+  color: white !important;
+}
+
+.terms-box {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  /* border: 1px solid white; */
+  background: linear-gradient(rgb(0, 0, 0), rgb(29, 28, 28)) !important;
+  margin-bottom: 5rem !important;
+}
+
+.terms-box p,
+h1,
+span,
+h3,
+strong,
+a,
+li,
+ul {
+  background-color: transparent !important;
+}
+
+@media only screen and (max-width: 500px) {
+  .logo {
+    font-size: 1.35rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .logo {
+    font-size: 1.1rem;
+  }
+}
