@@ -1,5 +1,5 @@
 import cl from "./GameGenerator.module.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
@@ -12,13 +12,15 @@ const GameGenerator = () => {
     setRandomGame("");
   };
 
-  fetch(
-    `https://api.rawg.io/api/games?key=cf42e3bb5fbd48a691d516591b2fa9a5&page_size=45`
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      setFetchObject(data);
-    });
+  useEffect(() => {
+    fetch(
+      `https://api.rawg.io/api/games?key=cf42e3bb5fbd48a691d516591b2fa9a5&page_size=40`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setFetchObject(data);
+      });
+  });
 
   const gameHandler = () => {
     const randomInt = Math.round(Math.random() * 39);
@@ -33,7 +35,7 @@ const GameGenerator = () => {
   };
 
   return (
-    <div className={cl["inner-div"]}>
+    <div className={cl["inner-div"]} id="game">
       <h1 className={cl.header}>Game Generator</h1>
       <span className={cl.output}>{randomGame || "?"}</span>
       <button className={cl.generate} onClick={gameHandler}>

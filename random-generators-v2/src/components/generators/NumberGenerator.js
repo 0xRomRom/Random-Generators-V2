@@ -44,7 +44,7 @@ const NumberGenerator = () => {
   };
 
   return (
-    <div className={cl["inner-div"]}>
+    <div className={cl["inner-div"]} id="number">
       <h1 className={cl.header}>Number Generator</h1>
       <span className={cl.output}>{randomNumber || "?"}</span>
       <button className={cl.generate} onClick={calculateHandler}>

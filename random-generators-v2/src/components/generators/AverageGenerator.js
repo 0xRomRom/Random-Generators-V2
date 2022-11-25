@@ -27,7 +27,7 @@ const AverageGenerator = () => {
   };
 
   return (
-    <div className={cl["inner-div"]}>
+    <div className={cl["inner-div"]} id="average">
       <h1 className={cl.header}>Average Number Generator</h1>
       <span className={cl.output}>{average || "?"}</span>
       <button className={cl.generate} onClick={generateAverage}>

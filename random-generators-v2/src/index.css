@@ -8,6 +8,7 @@ body {
   /* background-color: black; */
   background: linear-gradient(black, rgb(29, 28, 28));
   overflow-x: hidden !important;
+  scroll-behavior: smooth !important;
 }
 
 /* width */

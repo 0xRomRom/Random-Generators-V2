@@ -226,7 +226,7 @@ const CountryGenerator = () => {
   };
 
   return (
-    <div className={cl["inner-div"]}>
+    <div className={cl["inner-div"]} id="country">
       <h1 className={cl.header}>Country Generator</h1>
       <span className={cl.output}>{randomCountry || "?"}</span>
       <button className={cl.generate} onClick={countryHandler}>

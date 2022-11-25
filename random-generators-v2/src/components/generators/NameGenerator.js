@@ -45,7 +45,7 @@ const NameGenerator = () => {
   };
 
   return (
-    <div className={cl["inner-div"]}>
+    <div className={cl["inner-div"]} id="name">
       <h1 className={cl.header}>Name Generator</h1>
       {!sexChange && (
         <span className={cl.output}>{randomFemaleName || "?"}</span>

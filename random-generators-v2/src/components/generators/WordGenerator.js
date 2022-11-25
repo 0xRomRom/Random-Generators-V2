@@ -35,7 +35,7 @@ const WordGenerator = () => {
   };
 
   return (
-    <div className={cl["inner-div"]}>
+    <div className={cl["inner-div"]} id="word">
       <h1 className={cl.header}>Word Generator</h1>
       <span className={cl.output}>{randomWord || "?"}</span>
       <button className={cl.generate} onClick={wordHandler}>

@@ -50,7 +50,7 @@ const CoinTossGenerator = () => {
   };
 
   return (
-    <div className={cl["inner-div"]}>
+    <div className={cl["inner-div"]} id="toss">
       <h1 className={cl.header}>Coin Toss Generator</h1>
       <span className={cl.output}>{randomToss || "?"}</span>
       <button className={cl.generate} onClick={flipHandler}>

@@ -22,7 +22,7 @@ const ColorGenerator = () => {
   };
 
   return (
-    <div className={cl["inner-div"]}>
+    <div className={cl["inner-div"]} id="color">
       <h1 className={cl.header}>Color Generator</h1>
       <span className={cl.output}>{randomColor || "?"}</span>
       <button className={cl.generate} onClick={colorHandler}>

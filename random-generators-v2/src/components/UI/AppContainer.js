@@ -6,7 +6,7 @@ import WordGenerator from "../generators/WordGenerator.js";
 
 const AppContainer = () => {
   return (
-    <div className={cl["main-container"]}>
+    <div className={cl["main-container"]} id="top">
       <div className={cl["inner-container"]}>
         <RandomModal>
           <NumberGenerator />

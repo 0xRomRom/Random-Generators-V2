@@ -48,7 +48,7 @@ const LetterGenerator = () => {
   };
 
   return (
-    <div className={cl["inner-div"]}>
+    <div className={cl["inner-div"]} id="letter">
       <h1 className={cl.header}>Letter Generator</h1>
       <span className={cl.output}>{randomLetter || "?"}</span>
       <button className={cl.generate} onClick={letterHandler}>
