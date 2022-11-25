@@ -26,4 +26,7 @@
     align-items: center;
     gap: 2rem;
   }
+  .main-container {
+  padding-top: 1rem !important;
+  }
 }
