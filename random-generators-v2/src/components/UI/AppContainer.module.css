@@ -3,6 +3,7 @@
   width: 100vw;
   min-height: 27.5rem;
   /* border-bottom: 1px solid white; */
+  margin-top: 5rem !important;
 }
 
 .inner-container {

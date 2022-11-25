@@ -17,6 +17,30 @@
 
 @media only screen and (max-width: 1000px) {
   .main-modal {
-    width: 45%;
+    width: 25rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main-modal {
+    width: 20rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .main-modal {
+    left: 10%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .main-modal {
+    left: 0%;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .main-modal {
+    width: 17rem;
   }
 }
