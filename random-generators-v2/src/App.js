@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop.js";
 import MainApp from "./components/UI/MainApp.js";
@@ -10,6 +10,10 @@ const TRACKING_ID = "G-L8K1WHGWWZ"; // OUR_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
 
 function App() {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   return (
     <Fragment>
       <ScrollToTop>
