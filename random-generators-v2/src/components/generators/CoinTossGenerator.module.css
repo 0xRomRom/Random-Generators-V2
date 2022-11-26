@@ -102,3 +102,9 @@
   top: 10rem;
   font-family: "Open Sans";
 }
+
+@media only screen and (max-width: 400px) {
+  .img {
+    width: 3rem;
+  }
+}
