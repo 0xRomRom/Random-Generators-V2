@@ -13,10 +13,11 @@ const Privacy = () => {
       <div className={cl["terms-box"]}>
         <h1>Privacy Policy for Random Generator</h1>
         <p>
-          At Random Generator, accessible from https://www.randomgenerators.io,
-          one of our main priorities is the privacy of our visitors. This
-          Privacy Policy document contains types of information that is
-          collected and recorded by Random Generator and how we use it.
+          At Random Generators, accessible from
+          https://www.random-generators.com, one of our main priorities is the
+          privacy of our visitors. This Privacy Policy document contains types
+          of information that is collected and recorded by Random Generator and
+          how we use it.
         </p>
         <br />
         <p>
@@ -29,11 +30,7 @@ const Privacy = () => {
           for visitors to our website with regards to the information that they
           shared and/or collect in Random Generator. This policy is not
           applicable to any information collected offline or via channels other
-          than this website. Our Privacy Policy was created with the help of the
-          <a href="https://h-supertools.com/web/privacy-policy-generator/">
-            H-supertools Privacy Policy Generator
-          </a>
-          .
+          than this website.
         </p>
         <br />
         <h2>Consent</h2>

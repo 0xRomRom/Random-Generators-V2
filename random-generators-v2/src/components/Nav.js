@@ -1,5 +1,5 @@
 import cl from "./Nav.module.css";
-import { Link } from 'react-scroll'
+import { Link } from "react-scroll";
 
 const Nav = () => {
   return (
@@ -31,8 +31,8 @@ const Nav = () => {
       <Link to="average" spy={true} smooth={true} offset={-70} duration={500}>
         <li>Average</li>
       </Link>
-      <Link to="game" spy={true} smooth={true} offset={-70} duration={500}>
-        <li>Game</li>
+      <Link to="crypto" spy={true} smooth={true} offset={-70} duration={500}>
+        <li>Crypto</li>
       </Link>
     </ul>
   );

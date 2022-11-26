@@ -19,7 +19,7 @@ const Terms = () => {
         <p>
           These terms and conditions outline the rules and regulations for the
           use of Random Generators's Website, located at
-          https://www.randomgenerators.io/.
+          https://www.random-generators.com.
         </p>
 
         <p>
@@ -82,15 +82,6 @@ const Terms = () => {
           <li>Reproduce, duplicate or copy material from Random Generators</li>
           <li>Redistribute content from Random Generators</li>
         </ul>
-
-        <p>
-          This Agreement shall begin on the date hereof. Our Terms and
-          Conditions were created with the help of the{" "}
-          <a href="https://h-supertools.com/web/terms-and-conditions-generator/">
-            H-supertools Terms And Conditions Generator
-          </a>
-          .
-        </p>
 
         <p>
           Parts of this website offer an opportunity for users to post and

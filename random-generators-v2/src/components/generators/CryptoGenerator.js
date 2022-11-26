@@ -40,7 +40,7 @@ const CryptoGenerator = () => {
   };
 
   return (
-    <div className={cl["inner-div"]} id="game">
+    <div className={cl["inner-div"]} id="crypto">
       <h1 className={cl.header}>Crypto Generator</h1>
       <span className={cl.output}>{randomCoin || "?"}</span>
       <button className={cl.generate} onClick={coinHandler}>
