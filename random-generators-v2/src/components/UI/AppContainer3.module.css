@@ -2,7 +2,6 @@
   position: relative;
   width: 100vw;
   min-height: 27.5rem;
-  /* border-bottom: 1px solid white; */
   padding-bottom: 2rem !important;
 }
 
@@ -13,7 +12,6 @@
   margin-top: 1rem !important;
   min-height: 15rem;
   justify-content: space-evenly;
-  /* background-color: red; */
   display: flex;
   color: white;
   gap: 1%;
@@ -29,5 +27,5 @@
   }
   .main-container {
     padding-top: 1rem !important;
-    }
+  }
 }

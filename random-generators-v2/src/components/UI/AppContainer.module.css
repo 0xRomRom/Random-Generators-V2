@@ -2,7 +2,6 @@
   position: relative;
   width: 100vw;
   min-height: 27.5rem;
-  /* border-bottom: 1px solid white; */
   margin-top: 5rem !important;
 }
 
@@ -12,7 +11,6 @@
   left: 2.5%;
   margin-top: 1rem !important;
   min-height: 15rem;
-  /* background-color: red; */
   justify-content: space-evenly;
   display: flex;
   color: white;

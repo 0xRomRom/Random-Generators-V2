@@ -1,5 +1,5 @@
 import cl from "./ColorGenerator.module.css";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
@@ -17,6 +17,7 @@ const ColorGenerator = () => {
     )}, ${Math.round(Math.random() * 255 + 1)}, ${Math.round(
       Math.random() * 255 + 1
     )})`;
+    console.log(randomColor);
     setRandomColor(randomColor);
     setLogArray((color) => [...color, randomColor]);
   };
@@ -29,8 +30,11 @@ const ColorGenerator = () => {
         Generate
       </button>
       <div
+        ref={(el) =>
+          el &&
+          el.style.setProperty("background-color", randomColor, "important")
+        }
         className={cl["color-output"]}
-        style={{ backgroundColor: randomColor }}
       ></div>
       <div className={cl["log-box"]}>
         <ul>

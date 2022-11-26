@@ -4,7 +4,6 @@
   position: relative;
   width: 100vw;
   height: auto;
-  background-color: black !important;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -15,7 +14,6 @@
 
 * {
   list-style-type: none;
-  /* background-color: black !important; */
 }
 
 .logo {
@@ -39,8 +37,6 @@
   position: relative;
   width: 80%;
   height: 80%;
-  /* border: 1px solid white; */
-  background: linear-gradient(rgb(0, 0, 0), rgb(29, 28, 28)) !important;
   margin-bottom: 5rem !important;
 }
 
