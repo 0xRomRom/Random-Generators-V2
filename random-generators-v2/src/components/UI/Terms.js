@@ -2,6 +2,9 @@ import cl from "./Terms.module.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import ReactGA from "react-ga";
+const TRACKING_ID = "G-L8K1WHGWWZ"; // OUR_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
 
 const Terms = () => {
   return (
