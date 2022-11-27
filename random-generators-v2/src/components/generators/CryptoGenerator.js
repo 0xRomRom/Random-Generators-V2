@@ -1,5 +1,5 @@
 import cl from "./CryptoGenerator.module.css";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { Coins } from "../data/Coins";
