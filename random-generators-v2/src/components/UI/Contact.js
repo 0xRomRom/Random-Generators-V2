@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import React, { useRef, useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 const TRACKING_ID = "G-L8K1WHGWWZ"; // OUR_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
 
 const Contact = () => {
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.send(window.location.pathname + window.location.search);
   }, []);
 
   const messageRef = useRef("");
