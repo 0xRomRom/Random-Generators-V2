@@ -114,6 +114,10 @@
   color: white;
 }
 
+.navbar {
+  position: relative;
+}
+
 .submit:hover {
   background-color: rgb(10, 10, 217) !important;
   /* background-color: rgb(53, 53, 187) !important; */
