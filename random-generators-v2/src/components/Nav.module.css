@@ -79,7 +79,7 @@ a {
     color: white;
     z-index: 100;
     padding-right: 1rem !important;
-    background-color: transparent;
+    background-color: transparent !important;
   }
 }
 @media only screen and (max-width: 450px) {
@@ -87,7 +87,7 @@ a {
     position: fixed;
     width: 105%;
     height: auto;
-    top: 1.5rem;
+    top: 1.6rem;
     left: -0.5rem;
     display: flex;
     flex-direction: row;
@@ -95,7 +95,7 @@ a {
     align-items: center;
     gap: 0.25rem;
     font-size: 0.6rem;
-    background-color: black;
+    background-color: black !important;
   }
   .header-text {
     background-color: black !important;

@@ -1,0 +1,31 @@
+.main-container {
+  position: relative;
+  width: 100vw;
+  min-height: 27.5rem;
+  padding-bottom: 2rem !important;
+}
+
+.inner-container {
+  position: relative;
+  max-width: 95%;
+  left: 2.5%;
+  margin-top: 1rem !important;
+  min-height: 15rem;
+  justify-content: space-evenly;
+  display: flex;
+  color: white;
+  gap: 1%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .inner-container {
+    min-height: 30rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .main-container {
+    padding-top: 1rem !important;
+  }
+}
