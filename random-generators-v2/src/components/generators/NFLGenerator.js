@@ -2,7 +2,6 @@ import cl from "./NFLGenerator.module.css";
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
-import { Coins } from "../data/Coins";
 import { footballTeams } from "../data/football";
 
 const NFLGenerator = () => {
@@ -14,7 +13,6 @@ const NFLGenerator = () => {
   };
 
   const teamHandler = () => {
-    console.log(footballTeams.length);
     const randomInt = Math.round(Math.random() * 32);
     setRandomTeam(footballTeams[randomInt]);
     setLogArray((item) => [...item, footballTeams[randomInt]]);
