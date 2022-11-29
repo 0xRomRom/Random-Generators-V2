@@ -29,18 +29,18 @@
 
 @media only screen and (max-width: 500px) {
   .main-modal {
-    left: 10%;
+    width: 17rem;
   }
 }
 
 @media only screen and (max-width: 450px) {
   .main-modal {
-    left: 0%;
+    left: 5%;
   }
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 370px) {
   .main-modal {
-    width: 17rem;
+    left: 8%;
   }
 }

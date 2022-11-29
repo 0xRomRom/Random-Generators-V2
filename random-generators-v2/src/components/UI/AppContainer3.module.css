@@ -27,5 +27,6 @@
   }
   .main-container {
     padding-top: 1rem !important;
+    padding-bottom: 0rem !important;
   }
 }

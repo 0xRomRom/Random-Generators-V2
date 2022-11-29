@@ -22,7 +22,7 @@ const FreeGameGenerator = () => {
   };
 
   return (
-    <div className={cl["inner-div"]} id="nfl">
+    <div className={cl["inner-div"]} id="game">
       <h1 className={cl.header}>Free To Play Game Generator</h1>
       <span className={cl.output}>{randomGame || "?"}</span>
       <button className={cl.generate} onClick={gameHandler}>

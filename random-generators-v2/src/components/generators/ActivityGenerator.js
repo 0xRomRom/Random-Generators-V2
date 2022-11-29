@@ -20,7 +20,7 @@ const ActivityGenerator = () => {
   };
 
   return (
-    <div className={cl["inner-div"]} id="nfl">
+    <div className={cl["inner-div"]} id="activity">
       <h1 className={cl.header}>Random Activity Generator</h1>
       <span className={cl.output}>{randomActivity || "?"}</span>
       <button className={cl.generate} onClick={activityHandler}>
