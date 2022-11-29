@@ -36,22 +36,21 @@
   /* background-color: black; */
   width: 100%;
   padding: 1rem 0rem !important;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .log-box {
   position: relative;
-  width: 172%;
-  left: 2%;
+  width: 50%;
+  left: 25%;
   height: 7rem;
   top: 6.5rem;
   overflow: auto;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   list-style-type: none;
   /* background-color: black; */
-  overflow-x: hidden;
 }
 
 .log-box li {
@@ -68,20 +67,4 @@
 .delete-list:hover {
   color: white;
   cursor: pointer;
-}
-
-.flex-list {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.left {
-  width: 14rem;
-  font-size: 0.9rem;
-}
-
-.right {
-  width: 30rem;
-  font-size: 0.9rem;
 }
