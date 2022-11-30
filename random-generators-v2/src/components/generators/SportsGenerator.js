@@ -1,28 +1,28 @@
-import cl from "./WebsiteGenerator.module.css";
+import cl from "./SportsGenerator.module.css";
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
-import { websitesArray } from "../data/websites.js";
+import { sportsArray } from "../data/sports.js";
 
-const WebsiteGenerator = () => {
+const SportsGenerator = () => {
   const [logArray, setLogArray] = useState([]);
-  const [randomWebsite, setRandomWebsite] = useState("");
+  const [randomSport, setRandomSport] = useState("");
   const deleteListHandler = () => {
     setLogArray([]);
-    setRandomWebsite("");
+    setRandomSport("");
   };
 
-  const websiteHandler = () => {
-    const randomInt = Math.round(Math.random() * websitesArray.length - 1);
-    setRandomWebsite(websitesArray[randomInt]);
-    setLogArray((item) => [...item, websitesArray[randomInt]]);
+  const sportsHandler = () => {
+    const randomInt = Math.round(Math.random() * sportsArray.length - 1);
+    setRandomSport(sportsArray[randomInt]);
+    setLogArray((item) => [...item, sportsArray[randomInt]]);
   };
 
   return (
-    <div className={cl["inner-div"]} id="website">
-      <h1 className={cl.header}>Website Generator</h1>
-      <span className={cl.output}>{randomWebsite || "?"}</span>
-      <button className={cl.generate} onClick={websiteHandler}>
+    <div className={cl["inner-div"]} id="sports">
+      <h1 className={cl.header}>Sport Generator</h1>
+      <span className={cl.output}>{randomSport || "?"}</span>
+      <button className={cl.generate} onClick={sportsHandler}>
         Generate
       </button>
       <div className={cl["log-box"]}>
@@ -37,7 +37,7 @@ const WebsiteGenerator = () => {
           })}
         </ul>
       </div>
-      {randomWebsite && (
+      {randomSport && (
         <FontAwesomeIcon
           icon={faTrashCan}
           className={cl["delete-list"]}
@@ -48,4 +48,4 @@ const WebsiteGenerator = () => {
   );
 };
 
-export default WebsiteGenerator;
+export default SportsGenerator;

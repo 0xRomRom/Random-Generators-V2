@@ -46,6 +46,12 @@ const Nav = () => {
       <Link to="fruit" spy={true} smooth={true} offset={-70} duration={500}>
         <li>Fruit</li>
       </Link>
+      <Link to="website" spy={true} smooth={true} offset={-70} duration={500}>
+        <li>Website</li>
+      </Link>
+      <Link to="sports" spy={true} smooth={true} offset={-70} duration={500}>
+        <li>Sport</li>
+      </Link>
     </ul>
   );
 };

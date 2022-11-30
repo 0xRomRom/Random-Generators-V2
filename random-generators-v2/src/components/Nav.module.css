@@ -48,21 +48,27 @@ a {
   color: white !important;
 }
 
-@media only screen and (max-width: 1430px) {
-  .header-text {
-    font-size: 1.5rem;
-  }
-  li {
-    font-size: 1rem;
-  }
-}
-
-@media only screen and (max-width: 1230px) {
+@media only screen and (max-width: 1550px) {
   .nav {
     gap: 0.5rem;
   }
   li {
     font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 1430px) {
+  .header-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 1180px) {
+  li {
+    font-size: 0.7rem;
+  }
+  .nav {
+    gap: 0.2rem;
   }
 }
 
