@@ -25,6 +25,7 @@
   padding: 0.25rem 0rem !important;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  margin-top: 1.5rem !important;
 }
 .generate:hover {
   background-color: rgb(183, 64, 246);
@@ -35,16 +36,17 @@
   text-align: center;
   /* background-color: black; */
   width: 100%;
-  padding: 1rem 0rem !important;
-  font-size: 1.5rem;
+  height: 2rem;
+  /* padding: 1rem 0rem !important; */
+  font-size: 1.2rem;
 }
 
 .log-box {
   position: relative;
-  width: 50%;
-  left: 25%;
+  width: 75%;
+  left: 12.5%;
   height: 7rem;
-  top: 6.5rem;
+  top: 1.5rem;
   overflow: auto;
   display: flex;
   justify-content: center;
@@ -61,7 +63,7 @@
   color: gray;
   font-size: 1.75rem;
   position: relative;
-  top: 7.1rem !important;
+  top: 5.1rem !important;
 }
 
 .delete-list:hover {

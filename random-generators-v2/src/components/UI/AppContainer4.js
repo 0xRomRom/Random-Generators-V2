@@ -1,10 +1,10 @@
-import cl from "./AppContainer3.module.css";
+import cl from "./AppContainer4.module.css";
 import RandomModal from "./RandomModal.js";
 import NFLGenerator from "../generators/NFLGenerator";
 import FreeGameGenerator from "../generators/FreeGameGenerator";
 import ActivityGenerator from "../generators/ActivityGenerator";
 
-const AppContainer3 = () => {
+const AppContainer4 = () => {
   return (
     <div className={cl["main-container"]}>
       <div className={cl["inner-container"]}>
@@ -22,4 +22,4 @@ const AppContainer3 = () => {
   );
 };
 
-export default AppContainer3;
+export default AppContainer4;
