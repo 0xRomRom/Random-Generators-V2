@@ -19,7 +19,7 @@ const FruitGenerator = () => {
   };
 
   return (
-    <div className={cl["inner-div"]} id="nfl">
+    <div className={cl["inner-div"]} id="fruit">
       <h1 className={cl.header}>Fruit Generator</h1>
       <span className={cl.output}>{randomFruit || "?"}</span>
       <button className={cl.generate} onClick={fruitHandler}>
