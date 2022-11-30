@@ -1,18 +1,19 @@
 import cl from "./AppContainer5.module.css";
 import RandomModal from "./RandomModal.js";
 import FruitGenerator from "../generators/FruitGenerator";
+import WebsiteGenerator from "../generators/WebsiteGenerator";
 
 const AppContainer5 = () => {
   return (
     <div className={cl["main-container"]}>
       <div className={cl["inner-container"]}>
         <RandomModal>
-            <FruitGenerator />
+          <FruitGenerator />
         </RandomModal>
         <RandomModal>
+          <WebsiteGenerator />
         </RandomModal>
-        <RandomModal>
-        </RandomModal>
+        <RandomModal></RandomModal>
       </div>
     </div>
   );

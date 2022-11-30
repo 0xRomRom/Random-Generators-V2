@@ -1,29 +1,28 @@
-import cl from "./FruitGenerator.module.css";
+import cl from "./WebsiteGenerator.module.css";
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
-import { fruitArray } from "../data/fruits.js";
+import { websitesArray } from "../data/websites.js";
 
-const FruitGenerator = () => {
+const WebsiteGenerator = () => {
   const [logArray, setLogArray] = useState([]);
-  const [randomFruit, setRandomFruit] = useState("");
+  const [randomWebsite, setRandomWebsite] = useState("");
   const deleteListHandler = () => {
     setLogArray([]);
-    setRandomFruit("");
+    setRandomWebsite("");
   };
 
-  const fruitHandler = () => {
-    console.log(fruitArray.length);
-    const randomInt = Math.round(Math.random() * 36);
-    setRandomFruit(fruitArray[randomInt]);
-    setLogArray((item) => [...item, fruitArray[randomInt]]);
+  const websiteHandler = () => {
+    const randomInt = Math.round(Math.random() * websitesArray.length - 1);
+    setRandomWebsite(websitesArray[randomInt]);
+    setLogArray((item) => [...item, websitesArray[randomInt]]);
   };
 
   return (
     <div className={cl["inner-div"]} id="fruit">
-      <h1 className={cl.header}>Fruit Generator</h1>
-      <span className={cl.output}>{randomFruit || "?"}</span>
-      <button className={cl.generate} onClick={fruitHandler}>
+      <h1 className={cl.header}>Website Generator</h1>
+      <span className={cl.output}>{randomWebsite || "?"}</span>
+      <button className={cl.generate} onClick={websiteHandler}>
         Generate
       </button>
       <div className={cl["log-box"]}>
@@ -32,13 +31,13 @@ const FruitGenerator = () => {
             return (
               <li key={Math.random()}>
                 {i + 1 + ": "}
-                {numbers}
+                <a href={numbers}>{numbers}</a>
               </li>
             );
           })}
         </ul>
       </div>
-      {randomFruit && (
+      {randomWebsite && (
         <FontAwesomeIcon
           icon={faTrashCan}
           className={cl["delete-list"]}
@@ -49,4 +48,4 @@ const FruitGenerator = () => {
   );
 };
 
-export default FruitGenerator;
+export default WebsiteGenerator;
