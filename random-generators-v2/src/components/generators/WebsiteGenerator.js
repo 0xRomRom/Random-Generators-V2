@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { websitesArray } from "../data/websites.js";
+// import { Link } from "react-router-dom";
 
 const WebsiteGenerator = () => {
   const [logArray, setLogArray] = useState([]);
@@ -31,7 +32,9 @@ const WebsiteGenerator = () => {
             return (
               <li key={Math.random()}>
                 {i + 1 + ": "}
-                <a href={numbers}>{numbers}</a>
+                <a href={"https://" + numbers} target="_blank" rel="noreferrer">
+                  {numbers}
+                </a>
               </li>
             );
           })}
